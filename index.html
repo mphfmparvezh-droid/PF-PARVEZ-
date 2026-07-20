@@ -1,50 +1,62 @@
-<span>📲</span> Latest Updates
-    </h2>
-    
-    <div class="space-y-4">
-      <div class="flex gap-4 bg-zinc-900 p-4 rounded-3xl border border-zinc-700 card-hover">
-        <div class="w-16 h-16 bg-zinc-700 rounded-2xl flex items-center justify-center text-4xl">✖️</div>
-        <div>
-          <h3 class="font-semibold">Capcut Pro New Version</h3>
-          <p class="text-zinc-400 text-sm">v20.3.0</p>
-          <div class="text-yellow-400">★★★★★</div>
-        </div>
-      </div>
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PF PARVEZ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4/dist/full.min.css" rel="stylesheet" type="text/css" />
+</head>
 
-      <div class="flex gap-4 bg-zinc-900 p-4 rounded-3xl border border-zinc-700 card-hover">
-        <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-500 rounded-2xl flex items-center justify-center text-4xl">♾️</div>
-        <div>
-          <h3 class="font-semibold">WINKIT RED VIP+</h3>
-          <p class="text-zinc-400 text-sm">v3.4.6</p>
-          <div class="text-yellow-400">★★★★★</div>
-        </div>
+<body class="bg-zinc-950 text-white min-h-screen pb-24">
+
+  <!-- Header -->
+  <header class="bg-zinc-900 py-4 border-b border-zinc-800">
+    <div class="max-w-4xl mx-auto px-4 flex items-center justify-between">
+      <h1 class="text-3xl font-bold text-cyan-400">PF PARVEZ</h1>
+      <div class="flex gap-4 text-2xl">
+        <span>📬</span>
+        <span>🌙</span>
       </div>
+    </div>
+  </header>
+
+  <!-- Welcome -->
+  <div class="max-w-4xl mx-auto px-4 mt-6">
+    <div class="bg-gradient-to-r from-cyan-500 to-blue-600 rounded-3xl p-8 text-center">
+      <h2 class="text-3xl font-bold">Welcome</h2>
+      <p class="text-lg mt-1">Premium Apps • AI Prompts • Presets</p>
     </div>
   </div>
 
-  <!-- Bottom Navigation -->
-  <div class="fixed bottom-0 left-0 right-0 bg-zinc-900 border-t border-zinc-700 py-3">
-    <div class="max-w-4xl mx-auto flex justify-around text-center text-xs">
-      <a href="#" class="flex flex-col items-center text-cyan-400">
-        <span class="text-3xl">🏠</span>
-        <span>Home</span>
-      </a>
-      <a href="#" class="flex flex-col items-center">
-        <span class="text-3xl">📱</span>
-        <span>Apps</span>
-      </a>
-      <a href="#" class="flex flex-col items-center">
-        <span class="text-3xl">🤖</span>
-        <span>AI Prompt</span>
-      </a>
-      <a href="#" class="flex flex-col items-center">
-        <span class="text-3xl">🎨</span>
-        <span>Preset</span>
-      </a>
-      <a href="#" class="flex flex-col items-center">
-        <span class="text-3xl">📖</span>
-        <span>Others</span>
-      </a>
+  <!-- Search -->
+  <div class="max-w-4xl mx-auto px-4 mt-6">
+    <input type="text" placeholder="Search Apps..." 
+           class="w-full bg-zinc-900 border border-zinc-700 rounded-3xl px-6 py-5 text-lg focus:outline-none focus:border-cyan-400">
+  </div>
+
+  <!-- Trending -->
+  <div class="max-w-4xl mx-auto px-4 mt-10">
+    <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">🔥 Trending</h2>
+    <div class="grid grid-cols-3 gap-4">
+      <!-- Cards এখানে আছে (সংক্ষিপ্ত) -->
+      <div class="bg-zinc-900 rounded-3xl p-3 border border-zinc-700">
+        <div class="h-28 bg-gradient-to-br from-pink-500 to-purple-500 rounded-2xl flex items-center justify-center text-5xl mb-3">😊</div>
+        <h3 class="font-semibold">WINK VIP +</h3>
+        <div class="text-yellow-400">★★★★★</div>
+      </div>
+      <!-- আরও ২টা কার্ড একইভাবে যোগ করতে পারো -->
+    </div>
+  </div>
+
+  <!-- Bottom Nav -->
+  <div class="fixed bottom-0 left-0 right-0 bg-zinc-900 border-t border-zinc-700 py-4">
+    <div class="max-w-4xl mx-auto flex justify-around">
+      <a href="#" class="text-center text-cyan-400">🏠<br>Home</a>
+      <a href="#" class="text-center">📱<br>Apps</a>
+      <a href="#" class="text-center">🤖<br>Prompt</a>
+      <a href="#" class="text-center">🎨<br>Preset</a>
+      <a href="#" class="text-center">📖<br>Others</a>
     </div>
   </div>
 
