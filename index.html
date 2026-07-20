@@ -6,72 +6,54 @@
   <title>PF PARVEZ</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-zinc-950 text-white min-h-screen">
+<body class="bg-zinc-950 text-white min-h-screen pb-20">
 
-  <header class="bg-zinc-900 py-6">
+  <!-- Header -->
+  <header class="bg-zinc-900 py-6 border-b border-zinc-800">
     <h1 class="text-4xl font-bold text-center text-cyan-400">PF PARVEZ</h1>
   </header>
 
-  <div class="max-w-4xl mx-auto px-4">
-    <!-- Welcome -->
-    <div class="bg-gradient-to-r from-cyan-500 to-blue-600 rounded-3xl p-8 mt-6 text-center">
+  <!-- Welcome -->
+  <div class="max-w-4xl mx-auto px-4 mt-8 text-center">
+    <div class="bg-gradient-to-r from-cyan-500 to-blue-600 rounded-3xl p-8">
       <h2 class="text-3xl font-bold">Welcome to PF PARVEZ</h2>
-    </div>
-
-    <!-- Search -->
-    <div class="mt-6">
-      <input type="text" placeholder="Search Apps..." 
-             class="w-full bg-zinc-900 border border-zinc-700 rounded-3xl px-6 py-5 text-lg">
-    </div>
-
-    <!-- Trending -->
-    <div class="mt-10">
-      <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">🔥 Trending</h2>
-      
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-4" id="appsContainer">
-        <!-- নতুন অ্যাপ এখানে আসবে -->
-      </div>
     </div>
   </div>
 
+  <!-- Search -->
+  <div class="max-w-4xl mx-auto px-4 mt-6">
+    <input type="text" placeholder="Search Apps..." 
+           class="w-full bg-zinc-900 border border-zinc-700 rounded-3xl px-6 py-5 text-lg focus:outline-none">
+  </div>
+
+  <!-- Trending -->
+  <div class="max-w-4xl mx-auto px-4 mt-10">
+    <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 px-1">🔥 Trending</h2>
+    
+    <div class="grid grid-cols-2 gap-4" id="appsContainer"></div>
+  </div>
+
   <script>
-    // ==================== এখানে নতুন অ্যাপ যোগ করো ====================
     const apps = [
-      {
-        title: "WINK VIP +",
-        emoji: "😊",
-        rating: "★★★★★",
-        link: "#"   // এখানে ডাউনলোড লিংক দিবে
-      },
-      {
-        title: "Capcut Pro New",
-        emoji: "✖️",
-        rating: "★★★★★",
-        link: "#"
-      }
-      // নতুন অ্যাপ যোগ করতে নিচের অংশ কপি করে পেস্ট করো এবং পরিবর্তন করো:
-      // {
-      //   title: "অ্যাপের নাম",
-      //   emoji: "😀",
-      //   rating: "★★★★★",
-      //   link: "https://ডাউনলোড-লিংক.com"
-      // }
+      { title: "WINK VIP +", emoji: "😊", link: "#" },
+      { title: "WINK BLUE VIP+", emoji: "😉", link: "#" },
+      { title: "Capcut Pro", emoji: "✖️", link: "#" },
+      { title: "WINKIT RED", emoji: "♾️", link: "#" }
     ];
 
-    // অ্যাপগুলো দেখানো
     const container = document.getElementById('appsContainer');
+    
     apps.forEach(app => {
-      const div = document.createElement('div');
-      div.className = "bg-zinc-900 rounded-3xl p-4 border border-zinc-700 hover:border-cyan-500 cursor-pointer";
-      div.innerHTML = `
-        <div class="h-32 bg-zinc-800 rounded-2xl flex items-center justify-center text-6xl mb-4">
+      const card = document.createElement('div');
+      card.className = "bg-zinc-900 rounded-3xl p-4 border border-zinc-700 hover:border-cyan-400 transition-all cursor-pointer";
+      card.innerHTML = `
+        <div class="h-28 bg-zinc-800 rounded-2xl flex items-center justify-center text-6xl mb-4">
           ${app.emoji}
         </div>
-        <h3 class="font-semibold text-lg">${app.title}</h3>
-        <p class="text-yellow-400 text-2xl">${app.rating}</p>
+        <h3 class="font-semibold text-center">${app.title}</h3>
       `;
-      div.onclick = () => window.open(app.link, '_blank');
-      container.appendChild(div);
+      card.onclick = () => window.open(app.link, '_blank');
+      container.appendChild(card);
     });
   </script>
 
