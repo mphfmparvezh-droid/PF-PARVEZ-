@@ -1,1 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PF PARVEZ</title>
 
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#0d1117;
+color:#fff;
+}
+
+header{
+padding:20px;
+text-align:center;
+background:#161b22;
+box-shadow:0 2px 10px rgba(0,0,0,.4);
+}
+
+header h1{
+font-size:28px;
+color:#00d4ff;
+}
+
+.search{
+padding:15px;
+}
+
+.search input{
+width:100%;
+padding:14px;
+border:none;
+border-radius:12px;
+background:#1f2937;
+color:#fff;
+font-size:16px;
+outline:none;
+}
+
+.banner{
+margin:15px;
+padding:40px 20px;
+border-radius:18px;
+text-align:center;
+background:linear-gradient(135deg,#0072ff,#00c6ff);
+}
+
+.banner h2{
+font-size:28px;
+margin-bottom:10px;
+}
+
+.banner p{
+opacity:.9;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+padding:15px;
+}
+
+.card{
+background:#161b22;
+border-radius:16px;
+padding:15px;
+text-align:center;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card img{
+width:70px;
+height:70px;
+border-radius:18px;
+margin-bottom:10px;
+}
+
+.card h3{
+font-size:18px;
+margin-bottom:5px;
+}
+
+.card p{
+font-size:13px;
+opacity:.7;
+margin-bottom:10px;
+}
+
+.btn{
+display:inline-block;
+padding:10px 18px;
+background:#00d4ff;
+color:#000;
+font-weight:bold;
+border-radius:10px;
+text-decoration:none;
+}
+
+.bottom{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#161b22;
+display:flex;
+justify-content:space-around;
+padding:14px;
+}
+
+.bottom a{
+color:#fff;
+text-decoration:none;
+font-size:14px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>PF PARVEZ</h1>
+</header>
+
+<div class="search">
+<input type="text" placeholder="Search Apps...">
+</div>
+
+<div class="banner">
+<h2>Welcome</h2>
+<p>Premium Apps • AI Prompts • Presets</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://via.placeholder.com/100">
+<h3>Apps</h3>
+<p>Latest Apps</p>
+<a class="btn" href="#">Open</a>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/100">
+<h3>AI Prompt</h3>
+<p>Premium Prompt</p>
+<a class="btn" href="#">Open</a>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/100">
+<h3>Preset</h3>
+<p>Lightroom</p>
+<a class="btn" href="#">Open</a>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/100">
+<h3>Tutorial</h3>
+<p>Editing Course</p>
+<a class="btn" href="#">Open</a>
+</div>
+
+</div>
+
+<div style="height:80px"></div>
+
+<div class="bottom">
+<a href="#">Home</a>
+<a href="#">Apps</a>
+<a href="#">Prompt</a>
+<a href="#">Preset</a>
+<a href="#">Menu</a>
+</div>
+
+</body>
+</html>
