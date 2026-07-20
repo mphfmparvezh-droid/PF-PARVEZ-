@@ -6,15 +6,74 @@
   <title>PF PARVEZ</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-black text-white">
+<body class="bg-zinc-950 text-white min-h-screen">
 
-  <h1 class="text-4xl text-center mt-10 text-cyan-400">PF PARVEZ</h1>
-  <p class="text-center text-xl mt-4">Welcome to PF PARVEZ</p>
+  <header class="bg-zinc-900 py-6">
+    <h1 class="text-4xl font-bold text-center text-cyan-400">PF PARVEZ</h1>
+  </header>
 
-  <div class="max-w-md mx-auto mt-10 px-4">
-    <input type="text" placeholder="Search..." 
-           class="w-full bg-zinc-900 p-5 rounded-3xl text-lg">
+  <div class="max-w-4xl mx-auto px-4">
+    <!-- Welcome -->
+    <div class="bg-gradient-to-r from-cyan-500 to-blue-600 rounded-3xl p-8 mt-6 text-center">
+      <h2 class="text-3xl font-bold">Welcome to PF PARVEZ</h2>
+    </div>
+
+    <!-- Search -->
+    <div class="mt-6">
+      <input type="text" placeholder="Search Apps..." 
+             class="w-full bg-zinc-900 border border-zinc-700 rounded-3xl px-6 py-5 text-lg">
+    </div>
+
+    <!-- Trending -->
+    <div class="mt-10">
+      <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">🔥 Trending</h2>
+      
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4" id="appsContainer">
+        <!-- নতুন অ্যাপ এখানে আসবে -->
+      </div>
+    </div>
   </div>
+
+  <script>
+    // ==================== এখানে নতুন অ্যাপ যোগ করো ====================
+    const apps = [
+      {
+        title: "WINK VIP +",
+        emoji: "😊",
+        rating: "★★★★★",
+        link: "#"   // এখানে ডাউনলোড লিংক দিবে
+      },
+      {
+        title: "Capcut Pro New",
+        emoji: "✖️",
+        rating: "★★★★★",
+        link: "#"
+      }
+      // নতুন অ্যাপ যোগ করতে নিচের অংশ কপি করে পেস্ট করো এবং পরিবর্তন করো:
+      // {
+      //   title: "অ্যাপের নাম",
+      //   emoji: "😀",
+      //   rating: "★★★★★",
+      //   link: "https://ডাউনলোড-লিংক.com"
+      // }
+    ];
+
+    // অ্যাপগুলো দেখানো
+    const container = document.getElementById('appsContainer');
+    apps.forEach(app => {
+      const div = document.createElement('div');
+      div.className = "bg-zinc-900 rounded-3xl p-4 border border-zinc-700 hover:border-cyan-500 cursor-pointer";
+      div.innerHTML = `
+        <div class="h-32 bg-zinc-800 rounded-2xl flex items-center justify-center text-6xl mb-4">
+          ${app.emoji}
+        </div>
+        <h3 class="font-semibold text-lg">${app.title}</h3>
+        <p class="text-yellow-400 text-2xl">${app.rating}</p>
+      `;
+      div.onclick = () => window.open(app.link, '_blank');
+      container.appendChild(div);
+    });
+  </script>
 
 </body>
 </html>
