@@ -1,190 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PF PARVEZ</title>
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
-body{
-background:#0d1117;
-color:#fff;
-}
-
-header{
-padding:20px;
-text-align:center;
-background:#161b22;
-box-shadow:0 2px 10px rgba(0,0,0,.4);
-}
-
-header h1{
-font-size:28px;
-color:#00d4ff;
-}
-
-.search{
-padding:15px;
-}
-
-.search input{
-width:100%;
-padding:14px;
-border:none;
-border-radius:12px;
-background:#1f2937;
-color:#fff;
-font-size:16px;
-outline:none;
-}
-
-.banner{
-margin:15px;
-padding:40px 20px;
-border-radius:18px;
-text-align:center;
-background:linear-gradient(135deg,#0072ff,#00c6ff);
-}
-
-.banner h2{
-font-size:28px;
-margin-bottom:10px;
-}
-
-.banner p{
-opacity:.9;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:15px;
-padding:15px;
-}
-
-.card{
-background:#161b22;
-border-radius:16px;
-padding:15px;
-text-align:center;
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-}
-
-.card img{
-width:70px;
-height:70px;
-border-radius:18px;
-margin-bottom:10px;
-}
-
-.card h3{
-font-size:18px;
-margin-bottom:5px;
-}
-
-.card p{
-font-size:13px;
-opacity:.7;
-margin-bottom:10px;
-}
-
-.btn{
-display:inline-block;
-padding:10px 18px;
-background:#00d4ff;
-color:#000;
-font-weight:bold;
-border-radius:10px;
-text-decoration:none;
-}
-
-.bottom{
-position:fixed;
-bottom:0;
-left:0;
-width:100%;
-background:#161b22;
-display:flex;
-justify-content:space-around;
-padding:14px;
-}
-
-.bottom a{
-color:#fff;
-text-decoration:none;
-font-size:14px;
-}
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PF PARVEZ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4/dist/full.min.css" rel="stylesheet" type="text/css" />
+  
+  <script>
+    tailwind.config = {
+      content: [],
+      theme: {
+        extend: {}
+      }
+    }
+  </script>
 </head>
 
-<body>
+<body class="bg-zinc-950 text-white min-h-screen pb-20">
 
-<header>
-<h1>PF PARVEZ</h1>
-</header>
+  <!-- Header -->
+  <header class="bg-zinc-900 py-4 border-b border-zinc-800">
+    <div class="max-w-4xl mx-auto px-4">
+      <h1 class="text-3xl font-bold text-cyan-400 text-center">PF PARVEZ</h1>
+    </div>
+  </header>
 
-<div class="search">
-<input type="text" placeholder="Search Apps...">
-</div>
+  <!-- Search -->
+  <div class="max-w-4xl mx-auto px-4 mt-6">
+    <input 
+      type="text" 
+      placeholder="Search Apps..." 
+      class="w-full bg-zinc-900 border border-zinc-700 rounded-2xl px-5 py-4 text-lg focus:outline-none focus:border-cyan-500">
+  </div>
 
-<div class="banner">
-<h2>Welcome</h2>
-<p>Premium Apps • AI Prompts • Presets</p>
-</div>
+  <!-- Welcome Banner -->
+  <div class="max-w-4xl mx-auto px-4 mt-6">
+    <div class="bg-gradient-to-r from-cyan-500 to-blue-600 rounded-3xl p-8 text-center">
+      <h2 class="text-3xl font-bold mb-2">Welcome</h2>
+      <p class="text-lg opacity-90">Premium Apps • AI Prompts • Presets</p>
+    </div>
+  </div>
 
-<div class="grid">
+  <!-- Grid -->
+  <div class="max-w-4xl mx-auto px-4 mt-8">
+    <div class="grid grid-cols-2 gap-4">
+      
+      <div class="card bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:border-cyan-500 transition-all">
+        <div class="h-24 bg-zinc-800 flex items-center justify-center">
+          <img src="https://via.placeholder.com/100" class="w-16 h-16" alt="">
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-xl">Apps</h3>
+          <p class="text-zinc-400 text-sm">Latest Apps</p>
+          <button class="mt-4 w-full bg-cyan-500 hover:bg-cyan-600 text-black font-bold py-3 rounded-2xl transition">
+            Open
+          </button>
+        </div>
+      </div>
 
-<div class="card">
-<img src="https://via.placeholder.com/100">
-<h3>Apps</h3>
-<p>Latest Apps</p>
-<a class="btn" href="#">Open</a>
-</div>
+      <div class="card bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:border-cyan-500 transition-all">
+        <div class="h-24 bg-zinc-800 flex items-center justify-center">
+          <img src="https://via.placeholder.com/100" class="w-16 h-16" alt="">
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold text-xl">AI Prompt</h3>
+          <p class="text-zinc-400 text-sm">Premium Prompt</p>
+          <button class="mt-4 w-full bg-cyan-500 hover:bg-cyan-600 text-black font-bold py-3 rounded-2xl transition">
+            Open
+          </button>
+        </div>
+      </div>
 
-<div class="card">
-<img src="https://via.placeholder.com/100">
-<h3>AI Prompt</h3>
-<p>Premium Prompt</p>
-<a class="btn" href="#">Open</a>
-</div>
+      <!-- আরও দুটা কার্ড একইভাবে যোগ করো -->
 
-<div class="card">
-<img src="https://via.placeholder.com/100">
-<h3>Preset</h3>
-<p>Lightroom</p>
-<a class="btn" href="#">Open</a>
-</div>
+    </div>
+  </div>
 
-<div class="card">
-<img src="https://via.placeholder.com/100">
-<h3>Tutorial</h3>
-<p>Editing Course</p>
-<a class="btn" href="#">Open</a>
-</div>
-
-</div>
-
-<div style="height:80px"></div>
-
-<div class="bottom">
-<a href="#">Home</a>
-<a href="#">Apps</a>
-<a href="#">Prompt</a>
-<a href="#">Preset</a>
-<a href="#">Menu</a>
-</div>
+  <!-- Bottom Navigation -->
+  <div class="fixed bottom-0 left-0 right-0 bg-zinc-900 border-t border-zinc-700 py-3">
+    <div class="max-w-4xl mx-auto flex justify-around text-xs">
+      <a href="#" class="flex flex-col items-center text-cyan-400">
+        <span class="text-2xl">🏠</span>
+        <span>Home</span>
+      </a>
+      <a href="#" class="flex flex-col items-center">
+        <span class="text-2xl">📱</span>
+        <span>Apps</span>
+      </a>
+      <a href="#" class="flex flex-col items-center">
+        <span class="text-2xl">✍️</span>
+        <span>Prompt</span>
+      </a>
+      <a href="#" class="flex flex-col items-center">
+        <span class="text-2xl">🎨</span>
+        <span>Preset</span>
+      </a>
+      <a href="#" class="flex flex-col items-center">
+        <span class="text-2xl">📚</span>
+        <span>Menu</span>
+      </a>
+    </div>
+  </div>
 
 </body>
 </html>
