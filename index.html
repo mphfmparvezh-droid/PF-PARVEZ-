@@ -1,193 +1,49 @@
-<!DOCTYPE html>
-<html lang="bn">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PF PARVEZ</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@4/dist/full.min.css" rel="stylesheet" type="text/css" />
-  
-  <script>
-    tailwind.config = {
-      content: [],
-      theme: {
-        extend: {}
-      }
-    }
-  </script>
-</head>
-
-<body class="bg-zinc-950 text-white min-h-screen pb-20">
-
-  <!-- Header -->
-  <header class="bg-zinc-900 py-4 border-b border-zinc-800">
-    <div class="max-w-4xl mx-auto px-4">
-      <h1 class="text-3xl font-bold text-cyan-400 text-center">PF PARVEZ</h1>
-    </div>
-  </header>
-
-  <!-- Search -->
-  <div class="max-w-4xl mx-auto px-4 mt-6">
-    <input 
-      type="text" 
-      placeholder="Search Apps..." 
-      class="w-full bg-zinc-900 border border-zinc-700 rounded-2xl px-5 py-4 text-lg focus:outline-none focus:border-cyan-500">
-  </div>
-
-  <!-- Welcome Banner -->
-  <div class="max-w-4xl mx-auto px-4 mt-6">
-    <div class="bg-gradient-to-r from-cyan-500 to-blue-600 rounded-3xl p-8 text-center">
-      <h2 class="text-3xl font-bold mb-2">Welcome</h2>
-      <p class="text-lg opacity-90">Premium Apps • AI Prompts • Presets</p>
-    </div>
-  </div>
-
-  <!-- Grid -->
-  <div class="max-w-4xl mx-auto px-4 mt-8">
-    <div class="grid grid-cols-2 gap-4">
-      
-      <div class="card bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:border-cyan-500 transition-all">
-        <div class="h-24 bg-zinc-800 flex items-center justify-center">
-          <img src="https://via.placeholder.com/100" class="w-16 h-16" alt="">
-        </div>
-        <div class="p-4">
-          <h3 class="font-semibold text-xl">Apps</h3>
-          <p class="text-zinc-400 text-sm">Latest Apps</p>
-          <button class="mt-4 w-full bg-cyan-500 hover:bg-cyan-600 text-black font-bold py-3 rounded-2xl transition">
-            Open
-          </button>
-        </div>
-      </div>
-
-      <div class="card bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 hover:border-cyan-500 transition-all">
-        <div class="h-24 bg-zinc-800 flex items-center justify-center">
-          <img src="https://via.placeholder.com/100" class="w-16 h-16" alt="">
-        </div>
-        <div class="p-4">
-          <h3 class="font-semibold text-xl">AI Prompt</h3>
-          <p class="text-zinc-400 text-sm">Premium Prompt</p>
-          <button class="mt-4 w-full bg-cyan-500 hover:bg-cyan-600 text-black font-bold py-3 rounded-2xl transition">
-            Open
-          </button>
-        </div>
-      </div>
-
-      <!<!-- Trending Section -->
-  <div class="max-w-4xl mx-auto px-4 mt-10">
-    <div class="flex items-center gap-2 mb-4">
-      <span class="text-2xl">🔥</span>
-      <h2 class="text-2xl font-bold">Trending</h2>
-    </div>
-    
-    <div class="grid grid-cols-3 gap-3 overflow-x-auto pb-4 snap-x">
-      
-      <!-- Card 1 -->
-      <div class="bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-700 min-w-[160px] snap-center">
-        <div class="relative">
-          <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full font-bold">HOT</span>
-          <div class="h-32 bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center">
-            <span class="text-6xl">😊</span>
-          </div>
-        </div>
-        <div class="p-3">
-          <h3 class="font-semibold text-sm">WINK VIP +</h3>
-          <div class="flex text-yellow-400 text-sm mt-1">★★★★★</div>
-          <div class="flex items-center justify-between mt-3">
-            <span class="text-xs bg-green-600 px-3 py-1 rounded-full">1.2K</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-700 min-w-[160px] snap-center">
-        <div class="relative">
-          <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full font-bold">HOT</span>
-          <div class="h-32 bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center">
-            <span class="text-6xl">😉</span>
-          </div>
-        </div>
-        <div class="p-3">
-          <h3 class="font-semibold text-sm">WINK BLUE VIP+</h3>
-          <div class="flex text-yellow-400 text-sm mt-1">★★★★★</div>
-          <div class="flex items-center justify-between mt-3">
-            <span class="text-xs bg-green-600 px-3 py-1 rounded-full">1.1K</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-700 min-w-[160px] snap-center">
-        <div class="relative">
-          <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full font-bold">HOT</span>
-          <div class="h-32 bg-zinc-700 flex items-center justify-center">
-            <span class="text-5xl">✖️</span>
-          </div>
-        </div>
-        <div class="p-3">
-          <h3 class="font-semibold text-sm">Capcut Pro New Version</h3>
-          <div class="flex text-yellow-400 text-sm mt-1">★★★★★</div>
-          <div class="flex items-center justify-between mt-3">
-            <span class="text-xs bg-green-600 px-3 py-1 rounded-full">986</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Latest Updates -->
-  <div class="max-w-4xl mx-auto px-4 mt-10">
-    <div class="flex items-center gap-2 mb-4">
-      <span class="text-2xl">📲</span>
-      <h2 class="text-2xl font-bold">Latest Updates</h2>
-    </div>
+<span>📲</span> Latest Updates
+    </h2>
     
     <div class="space-y-4">
-      <div class="flex gap-4 bg-zinc-900 p-4 rounded-3xl border border-zinc-700">
-        <div class="w-20 h-20 bg-zinc-700 rounded-2xl flex items-center justify-center text-4xl">✖️</div>
-        <div class="flex-1">
+      <div class="flex gap-4 bg-zinc-900 p-4 rounded-3xl border border-zinc-700 card-hover">
+        <div class="w-16 h-16 bg-zinc-700 rounded-2xl flex items-center justify-center text-4xl">✖️</div>
+        <div>
           <h3 class="font-semibold">Capcut Pro New Version</h3>
-          <p class="text-sm text-zinc-400">v20.3.0</p>
-          <div class="flex text-yellow-400 text-sm mt-2">★★★★★</div>
+          <p class="text-zinc-400 text-sm">v20.3.0</p>
+          <div class="text-yellow-400">★★★★★</div>
         </div>
       </div>
 
-      <div class="flex gap-4 bg-zinc-900 p-4 rounded-3xl border border-zinc-700">
-        <div class="w-20 h-20 bg-gradient-to-br from-red-500 to-purple-500 rounded-2xl flex items-center justify-center text-4xl">♾️</div>
-        <div class="flex-1">
+      <div class="flex gap-4 bg-zinc-900 p-4 rounded-3xl border border-zinc-700 card-hover">
+        <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-500 rounded-2xl flex items-center justify-center text-4xl">♾️</div>
+        <div>
           <h3 class="font-semibold">WINKIT RED VIP+</h3>
-          <p class="text-sm text-zinc-400">v3.4.6</p>
-          <div class="flex text-yellow-400 text-sm mt-2">★★★★★</div>
+          <p class="text-zinc-400 text-sm">v3.4.6</p>
+          <div class="text-yellow-400">★★★★★</div>
         </div>
       </div>
-    </div>
-  </div>-- 
-
     </div>
   </div>
 
   <!-- Bottom Navigation -->
   <div class="fixed bottom-0 left-0 right-0 bg-zinc-900 border-t border-zinc-700 py-3">
-    <div class="max-w-4xl mx-auto flex justify-around text-xs">
+    <div class="max-w-4xl mx-auto flex justify-around text-center text-xs">
       <a href="#" class="flex flex-col items-center text-cyan-400">
-        <span class="text-2xl">🏠</span>
+        <span class="text-3xl">🏠</span>
         <span>Home</span>
       </a>
       <a href="#" class="flex flex-col items-center">
-        <span class="text-2xl">📱</span>
+        <span class="text-3xl">📱</span>
         <span>Apps</span>
       </a>
       <a href="#" class="flex flex-col items-center">
-        <span class="text-2xl">✍️</span>
-        <span>Prompt</span>
+        <span class="text-3xl">🤖</span>
+        <span>AI Prompt</span>
       </a>
       <a href="#" class="flex flex-col items-center">
-        <span class="text-2xl">🎨</span>
+        <span class="text-3xl">🎨</span>
         <span>Preset</span>
       </a>
       <a href="#" class="flex flex-col items-center">
-        <span class="text-2xl">📚</span>
-        <span>Menu</span>
+        <span class="text-3xl">📖</span>
+        <span>Others</span>
       </a>
     </div>
   </div>
