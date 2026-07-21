@@ -30,6 +30,9 @@ body {
 .brand {
     font-size: 18px;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 .brand i {
     color: #4eff7d;
@@ -107,7 +110,7 @@ body {
 .app-logo img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; /* লোগো যেন কাটা না যায় */
 }
 .app-title {
     font-size: 12px;
@@ -142,6 +145,7 @@ body {
     padding: 10px 0;
     border-radius: 25px 25px 0 0;
     transition: background 0.3s;
+    z-index: 100;
 }
 .nav-item {
     text-align: center;
@@ -159,7 +163,7 @@ body {
 }
 .mt-4 { margin-top: 25px; }
 
-/* লাইট থিম (যখন ক্লিক করবে তখন সাদা হবে) */
+/* লাইট থিম */
 body.light-mode {
     --bg-color: #ffffff;
     --text-color: #000000;
