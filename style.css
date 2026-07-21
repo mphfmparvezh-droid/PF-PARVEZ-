@@ -1,3 +1,9 @@
+:root {
+    --bg-color: #0b0b0b;
+    --text-color: #ffffff;
+    --card-bg: #161616;
+    --nav-bg: #0f0f0f;
+}
 * {
     margin: 0;
     padding: 0;
@@ -5,9 +11,10 @@
     font-family: 'Segoe UI', sans-serif;
 }
 body {
-    background: #0b0b0b;
-    color: #fff;
+    background: var(--bg-color);
+    color: var(--text-color);
     padding-bottom: 80px;
+    transition: background 0.3s, color 0.3s;
 }
 .container {
     max-width: 400px;
@@ -33,6 +40,7 @@ body {
     border-radius: 50%;
     margin-left: 8px;
     color: #ccc;
+    cursor: pointer;
 }
 .search-box {
     background: #1a1a1a;
@@ -78,11 +86,12 @@ body {
     gap: 15px;
 }
 .app-card {
-    background: #161616;
+    background: var(--card-bg);
     padding: 12px;
     border-radius: 16px;
     text-align: center;
     border: 1px solid #252525;
+    transition: background 0.3s;
 }
 .app-logo {
     width: 70px;
@@ -126,12 +135,13 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    background: #0f0f0f;
+    background: var(--nav-bg);
     border-top: 1px solid #222;
     display: flex;
     justify-content: space-around;
     padding: 10px 0;
     border-radius: 25px 25px 0 0;
+    transition: background 0.3s;
 }
 .nav-item {
     text-align: center;
@@ -148,3 +158,16 @@ body {
     color: #4eff7d;
 }
 .mt-4 { margin-top: 25px; }
+
+/* লাইট থিম (যখন ক্লিক করবে তখন সাদা হবে) */
+body.light-mode {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --card-bg: #f5f5f5;
+    --nav-bg: #ffffff;
+}
+body.light-mode .search-box { background: #eaeaea; border: 1px solid #ccc; }
+body.light-mode .search-box input { color: #000; }
+body.light-mode .actions i { background: #eaeaea; color: #333; }
+body.light-mode .app-card { border: 1px solid #ddd; }
+body.light-mode .app-logo { background: #e0e0e0; }
