@@ -1,67 +1,56 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PF PARVEZ</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Store Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="bg-zinc-950 text-white min-h-screen pb-20">
-
-  <!-- Header -->
-  <header class="bg-zinc-900 py-6 border-b border-zinc-800">
-    <h1 class="text-4xl font-bold text-center text-cyan-400">PF PARVEZ</h1>
-  </header>
-
-  <!-- Welcome -->
-  <div class="max-w-4xl mx-auto px-4 mt-8 text-center">
-    <div class="bg-gradient-to-r from-cyan-500 to-blue-600 rounded-3xl p-8">
-      <h2 class="text-3xl font-bold">Welcome Guys</h2>
-    </div>
-  </div>
-
-  <!-- Search -->
-  <div class="max-w-4xl mx-auto px-4 mt-6">
-    <input type="text" placeholder="Search Apps..." 
-           class="w-full bg-zinc-900 border border-zinc-700 rounded-3xl px-6 py-5 text-lg focus:outline-none">
-  </div>
-
-  <!-- Trending -->
-  <div class="max-w-4xl mx-auto px-4 mt-10">
-    <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 px-1">🔥 Trending</h2>
-    
-    <div class="grid grid-cols-2 gap-4" id="appsContainer"></div>
-  </div>
-
-  <script>
-    const apps = [
-{
-name: "WINK VIP+",
-icon: "images/wink.png",
-link: "https://t.me/PF_Editing_Zone_Official"
-},
-{
-name: "CapCut Pro",
-icon: "images/capcut.png",
-link: "https://t.me/PF_Editing_Zone_Official"
-}
-];
-
-    const container = document.getElementById('appsContainer');
-    
-    apps.forEach(app => {
-      const card = document.createElement('div');
-      card.className = "bg-zinc-900 rounded-3xl p-4 border border-zinc-700 hover:border-cyan-400 transition-all cursor-pointer";
-      card.innerHTML = `
-        <div class="h-28 bg-zinc-800 rounded-2xl flex items-center justify-center text-6xl mb-4">
-          ${app.emoji}
+<body>
+    <div class="container">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="brand"><i class="fas fa-shield-alt"></i> UnlockGen</div>
+            <div class="actions">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-paper-plane"></i>
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
-        <h3 class="font-semibold text-center">${app.title}</h3>
-      `;
-      card.onclick = () => window.open(app.link, '_blank');
-      container.appendChild(card);
-    });
-  </script>
 
+        <!-- Search Bar -->
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+            <i class="fas fa-search"></i>
+        </div>
+
+        <!-- Banner -->
+        <div class="banner">
+            <i class="fas fa-bullhorn"></i> প্রিমিয়ার অ্যাপস একদম ফ্রিতে পেতে, আমাদের টেলিগ্রাম চ্যানেলে জয়েন করুন!
+        </div>
+
+        <!-- Trending Section -->
+        <div class="section-header">
+            <h3><i class="fas fa-chart-line"></i> Trending Apps <span>(10)</span></h3>
+        </div>
+        <div id="trending-apps" class="app-grid"></div>
+
+        <!-- Latest Updates Section -->
+        <div class="section-header mt-4">
+            <h3><i class="fas fa-layer-group"></i> Latest Updates <span>(21)</span></h3>
+        </div>
+        <div id="latest-apps" class="app-grid"></div>
+
+        <!-- Bottom Menu -->
+        <div class="bottom-nav">
+            <div class="nav-item active"><i class="fas fa-home"></i> Home</div>
+            <div class="nav-item"><i class="fas fa-th-large"></i> Apps</div>
+            <div class="nav-item"><i class="fas fa-palette"></i> Preset</div>
+            <div class="nav-item"><i class="fas fa-robot"></i> AI Prompt</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
